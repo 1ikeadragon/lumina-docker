@@ -1,0 +1,28 @@
+version: '3'
+
+volumes:
+  mysql_dump:
+
+services:
+  db:
+    image: mysql:latest
+    container_name: lumina_db
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+    environment:
+      MYSQL_USER: root
+      MYSQL_DATABASE: lumina
+      MYSQL_PASSWORD: 21mw
+    ports: 
+      - "3306:3306"
+    volumes:
+      - mysql_dump:/var/lib/mysql
+    mem_swappiness: 0
+  
+  lumina:
+
+  hexvault:

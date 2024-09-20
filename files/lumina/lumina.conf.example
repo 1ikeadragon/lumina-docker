@@ -1,0 +1,1 @@
+CONNSTR="mysql;Server=127.0.0.1;Database=lumina;Uid=lumina;Pwd=mypatdb;"

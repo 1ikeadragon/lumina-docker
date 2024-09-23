@@ -22,7 +22,6 @@ RUN chown -R lumina:lumina /opt/lumina && \
 RUN chown -R hexvault:hexvault /opt/hexvault && \
     chmod 640 /opt/hexvault/hexvault.crt /opt/hexvault/hexvault.key /opt/hexvault/teamssrv.hexlic /opt/hexvault/hexvault.conf
 
-
 EXPOSE 65432
 
 EXPOSE 65433

@@ -17,10 +17,13 @@ RUN useradd -m -s /bin/bash lumina && \
     echo "hexvault:hexvault" | chpasswd
     
 RUN chown -R lumina:lumina /opt/lumina && \
-    chmod 640 /opt/lumina/lumina.crt /opt/lumina/lumina.key /opt/lumina/luminasrv.hexlic
+    chmod 640 /opt/lumina/lumina.crt /opt/lumina/lumina.key /opt/lumina/luminasrv.hexlic &&\
+    chmod +x /opt/lumina/lumina_server_teams
 
 RUN chown -R hexvault:hexvault /opt/hexvault && \
-    chmod 640 /opt/hexvault/hexvault.crt /opt/hexvault/hexvault.key /opt/hexvault/teamssrv.hexlic /opt/hexvault/hexvault.conf
+    chmod 640 /opt/hexvault/hexvault.crt /opt/hexvault/hexvault.key /opt/hexvault/teamssrv.hexlic /opt/hexvault/hexvault.conf &&\
+    chmod +x /opt/hexvault/vault_server
+
 
 EXPOSE 65432
 

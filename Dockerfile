@@ -7,9 +7,9 @@ ENV MYSQL_DATABASE=lumina \
     MYSQL_PASSWORD=lumina \
     MYSQL_ROOT_PASSWORD=root
 
-COPY ./lumina /opt/lumina
+COPY ./files/lumina /opt/lumina
 
-COPY ./hexvault /opt/hexvault
+COPY ./files/hexvault /opt/hexvault
 
 RUN useradd -m -s /bin/bash lumina && \
     echo "lumina:lumina" | chpasswd && \
